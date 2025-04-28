@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-	--color-primary: #7856ff;
+	--color-primary: #ffeebf;
+	--color-light: #fffaed;
+	--color-dark: #364153;
+	--color-bkg1: #e68584;
 }
 
 /* Base Styles */
 body {
-	background: #ebf0fa;
-	@apply text-gray-500 m-8;
+	@apply text-light bg-bkg1;
 }
 
 h1,
@@ -31,7 +33,7 @@ p > a {
 nav {
 	@apply pb-4 
 		border-b-2 
-		border-gray-200 
+		border-light 
 		flex 
 		items-center 
 		gap-5 
@@ -41,11 +43,11 @@ nav {
 }
 nav a,
 nav span {
-	@apply text-gray-500;
+	@apply text-primary px-2 cursor-pointer;
 }
 
 nav a:hover {
-	@apply text-black;
+	@apply text-dark;
 }
 
 main nav {
@@ -66,11 +68,11 @@ button {
 }
 
 button:hover {
-	@apply bg-gray-500/90;
+	@apply bg-light/90;
 }
 
 .btn-primary {
-	@apply bg-primary text-white;
+	@apply bg-primary text-dark;
 }
 
 .btn-secondary {
@@ -126,7 +128,7 @@ form button {
 
 /* Card Styles */
 .card {
-	@apply bg-white
+	@apply bg-light
 		shadow-sm
 		rounded-md
 		py-3
@@ -138,13 +140,13 @@ form button {
 
 .card h3 {
 	@apply font-bold
-		text-gray-700
+		text-dark
 		text-sm
 		mb-0;
 }
 
 .card p {
-	@apply my-4 text-sm leading-6;
+	@apply my-4 text-sm text-dark leading-6;
 }
 
 /* Pill Styles */

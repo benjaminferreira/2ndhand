@@ -12,6 +12,8 @@ export default function Navbar() {
 				width={200}
 				quality={100}
 				placeholder="blur"
+				style={{ borderRadius: "8px" }}
+				aria-label="2ndhand logo"
 			/>
 			<Link href="/">Dashboard</Link>
 			<Link href="/tickets">Tickets</Link>
