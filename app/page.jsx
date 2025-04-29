@@ -44,6 +44,14 @@ export default function Home() {
 					</p>
 				</div>
 			</div>
+			<div className="card">
+				<h3>I'm a lonely card for testing</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eaque debitis dolorem. Sit quasi
+					voluptates itaque veritatis eligendi necessitatibus nulla quibusdam id porro voluptas facilis
+					nesciunt, fuga dolorem dolore ut.
+				</p>
+			</div>
 		</main>
 	);
 }

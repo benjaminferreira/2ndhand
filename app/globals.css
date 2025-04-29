@@ -5,9 +5,9 @@
 	--color-accent1: #e68584;
 	--color-accent2: #ffeebf;
 	--color-accent3: #60aefd;
-	--color-bkg1: #ede5d3; /* #eee3c8; */
-	--color-bkg2: #fffaed;
-	--color-bkg3: #f4eddd;
+	--color-bkg1: #efe6d0; /*#ede5d3; #eee3c8; */
+	--color-bkg2: #fff8e8; /*#fffaed;*/
+	--color-bkg3: #faf0d8; /*#f4eddd; */
 }
 
 /* Base Styles */
