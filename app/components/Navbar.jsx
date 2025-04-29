@@ -6,7 +6,7 @@ import Logo from "./2ndhand-logo.png";
 export default function Navbar() {
 	return (
 		<nav>
-			<Image
+			{/* <Image
 				src={Logo}
 				alt="2ndhand Logo"
 				width={200}
@@ -14,9 +14,15 @@ export default function Navbar() {
 				placeholder="blur"
 				style={{ borderRadius: "8px" }}
 				aria-label="2ndhand logo"
-			/>
-			<Link href="/">Dashboard</Link>
-			<Link href="/tickets">Tickets</Link>
+			/> */}
+			<Link
+				href="/"
+				className="nav-logo"
+			>
+				2ndhand
+			</Link>
+			<Link href="/">Home</Link>
+			<Link href="/stores">My Stores</Link>
 		</nav>
 	);
 }

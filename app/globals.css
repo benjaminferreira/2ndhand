@@ -1,20 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-	--color-primary: #ffeebf;
-	--color-light: #fffaed;
-	--color-dark: #364153;
-	--color-bkg1: #e68584;
+	--color-text1: #333d4d; /*#364153;*/
+	--color-accent1: #e68584;
+	--color-accent2: #ffeebf;
+	--color-accent3: #60aefd;
+	--color-bkg1: #ede5d3; /* #eee3c8; */
+	--color-bkg2: #fffaed;
+	--color-bkg3: #f4eddd;
 }
 
 /* Base Styles */
 body {
-	@apply text-light bg-bkg1;
+	@apply text-text1 bg-bkg3;
 }
 
 h1,
 h2 {
-	@apply font-bold text-primary text-lg;
+	@apply font-bold text-text1 text-lg;
 }
 
 main {
@@ -22,68 +25,87 @@ main {
 }
 
 main > h2 {
-	@apply mb-4 pb-2 text-base;
+	@apply my-3 text-base;
 }
 
 p > a {
-	@apply text-primary underline;
+	@apply text-accent1 underline;
 }
 
 /* Nav Styles */
 nav {
 	@apply pb-4 
-		border-b-2 
-		border-light 
+		bg-accent1
 		flex 
 		items-center 
 		gap-5 
-		my-10 
-		mx-auto 
-		max-w-5xl;
-}
-nav a,
-nav span {
-	@apply text-primary px-2 cursor-pointer;
+		mb-10 
+		pt-10;
 }
 
-nav a:hover {
-	@apply text-dark;
+nav a,
+nav span {
+	@apply text-accent2 px-2 cursor-pointer;
+}
+
+nav a:is(:hover, :focus) {
+	@apply text-text1;
 }
 
 main nav {
 	@apply border-0;
 }
 
+.nav-logo {
+	@apply ml-4	
+		px-2
+		py-1
+		font-bold
+		text-xl
+		rounded-md
+		flex
+		justify-center
+		items-center
+		gap-2
+		cursor-pointer
+		bg-accent2
+		text-accent1
+		shadow-sm;
+}
+
 /* Button Styles */
 button {
 	@apply px-3 
 		py-2
-		rounded-sm
+		rounded-md
 		flex
 		justify-between
 		items-center
 		gap-2
 		text-sm
-		cursor-pointer;
+		cursor-pointer
+		border-1
+		border-transparent
+		shadow-sm;
 }
 
-button:hover {
-	@apply bg-light/90;
+button:is(:hover, :focus) {
+	@apply bg-bkg2/90 border-1 border-text1 text-text1;
 }
 
 .btn-primary {
-	@apply bg-primary text-dark;
+	@apply bg-accent1 text-bkg2;
 }
 
 .btn-secondary {
-	@apply bg-gray-200 text-gray-900;
+	@apply bg-accent3 text-bkg2;
 }
 
 /* Form Styles */
 form {
 	@apply py-4
 		px-7
-		bg-primary/5
+		bg-accent2/5
 		rounded-md
 		block
 		mx-auto
@@ -103,7 +125,7 @@ form select {
 		my-4
 		px-2
 		py-1
-		rounded-sm
+		rounded-md
 		w-full;
 }
 
@@ -119,7 +141,7 @@ form button {
 		text-red-800
 		py-1
 		px-2
-		rounded-sm
+		rounded-md
 		block
 		max-w-fit
 		my-4
@@ -127,11 +149,21 @@ form button {
 }
 
 /* Card Styles */
-.card {
-	@apply bg-light
-		shadow-sm
+.cardback {
+	@apply bg-bkg1
+		inset-shadow-sm
 		rounded-md
 		py-3
+		px-4
+		relative
+		overflow-hidden;
+}
+
+.card {
+	@apply bg-bkg2
+		shadow-sm
+		rounded-md
+		py-4
 		px-4
 		my-4
 		relative
@@ -140,13 +172,13 @@ form button {
 
 .card h3 {
 	@apply font-bold
-		text-dark
+		text-text1
 		text-sm
 		mb-0;
 }
 
 .card p {
-	@apply my-4 text-sm text-dark leading-6;
+	@apply my-4 text-sm text-text1 leading-6;
 }
 
 /* Pill Styles */
