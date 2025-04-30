@@ -1,40 +1,40 @@
 @import "tailwindcss";
 
 @theme {
-	--color-text1: #333d4d; /*#364153;*/
-	--color-accent1: #e68584;
-	--color-accent2: #ffeebf;
-	--color-accent3: #60aefd;
-	--color-bkg1: #efe6d0; /*#ede5d3; #eee3c8; */
-	--color-bkg2: #fff8e8; /*#fffaed;*/
-	--color-bkg3: #faf0d8; /*#f4eddd; */
+    --color-text1: #333d4d; /*#364153;*/
+    --color-accent1: #e68584;
+    --color-accent2: #ffeebf;
+    --color-accent3: #60aefd;
+    --color-bkg1: #efe6d0; /*#ede5d3; #eee3c8; */
+    --color-bkg2: #fff8e8; /*#fffaed;*/
+    --color-bkg3: #faf0d8; /*#f4eddd; */
 }
 
 /* Base Styles */
 body {
-	@apply text-text1 bg-bkg3;
+    @apply text-text1 bg-bkg3;
 }
 
 h1,
 h2 {
-	@apply font-bold text-text1 text-lg;
+    @apply font-bold text-text1 text-lg;
 }
 
 main {
-	@apply max-w-5xl my-12 mx-auto px-8;
+    @apply max-w-5xl my-12 mx-auto px-8;
 }
 
 main > h2 {
-	@apply my-3 text-base;
+    @apply my-3 text-base;
 }
 
 p > a {
-	@apply text-accent1 underline;
+    @apply text-accent1 underline;
 }
 
 /* Nav Styles */
 nav {
-	@apply pb-4 
+    @apply pb-4 
 		bg-accent1
 		flex 
 		items-center 
@@ -45,19 +45,19 @@ nav {
 
 nav a,
 nav span {
-	@apply text-accent2 px-2 cursor-pointer;
+    @apply text-accent2 px-2 cursor-pointer;
 }
 
-nav a:is(:hover, :focus) {
-	@apply text-text1;
+nav a:is(:hover, :focus-visible) {
+    @apply text-text1;
 }
 
 main nav {
-	@apply border-0;
+    @apply border-0;
 }
 
 .nav-logo {
-	@apply ml-4	
+    @apply ml-4	
 		px-2
 		py-1
 		font-bold
@@ -75,7 +75,7 @@ main nav {
 
 /* Button Styles */
 button {
-	@apply px-3 
+    @apply px-3 
 		py-2
 		rounded-md
 		flex
@@ -89,21 +89,21 @@ button {
 		shadow-sm;
 }
 
-button:is(:hover, :focus) {
-	@apply bg-bkg2/90 border-1 border-text1 text-text1;
+button:is(:hover, :focus-visible) {
+    @apply bg-bkg2/90 border-1 border-text1 text-text1;
 }
 
 .btn-primary {
-	@apply bg-accent1 text-bkg2;
+    @apply bg-accent1 text-bkg2;
 }
 
 .btn-secondary {
-	@apply bg-accent3 text-bkg2;
+    @apply bg-accent3 text-bkg2;
 }
 
 /* Form Styles */
 form {
-	@apply py-4
+    @apply py-4
 		px-7
 		bg-accent2/5
 		rounded-md
@@ -114,13 +114,13 @@ form {
 }
 
 form label {
-	@apply block;
+    @apply block;
 }
 
 form input,
 form textarea,
 form select {
-	@apply block
+    @apply block
 		mt-2
 		my-4
 		px-2
@@ -130,12 +130,12 @@ form select {
 }
 
 form button {
-	@apply block mx-auto;
+    @apply block mx-auto;
 }
 
 /* Feedback Styles */
 .error {
-	@apply border-2
+    @apply border-2
 		border-red-500
 		bg-red-300
 		text-red-800
@@ -150,7 +150,7 @@ form button {
 
 /* Card Styles */
 .cardback {
-	@apply bg-bkg1
+    @apply bg-bkg1
 		inset-shadow-sm
 		rounded-md
 		py-3
@@ -160,7 +160,7 @@ form button {
 }
 
 .card {
-	@apply bg-bkg2
+    @apply bg-bkg2
 		shadow-sm
 		rounded-md
 		py-4
@@ -171,19 +171,19 @@ form button {
 }
 
 .card h3 {
-	@apply font-bold
+    @apply font-bold
 		text-text1
 		text-sm
 		mb-0;
 }
 
 .card p {
-	@apply my-4 text-sm text-text1 leading-6;
+    @apply my-4 text-sm text-text1 leading-6;
 }
 
 /* Pill Styles */
 .pill {
-	@apply py-1
+    @apply py-1
 		px-2
 		mt-3
 		inline-block
@@ -192,19 +192,19 @@ form button {
 }
 
 .pill.high {
-	@apply bg-red-300 text-red-600;
+    @apply bg-red-300 text-red-600;
 }
 
 .pill.medium {
-	@apply bg-blue-300 text-blue-600;
+    @apply bg-blue-300 text-blue-600;
 }
 
 .pill.low {
-	@apply bg-emerald-300 text-emerald-600;
+    @apply bg-emerald-300 text-emerald-600;
 }
 
 .card .pill {
-	@apply absolute
+    @apply absolute
 		bottom-0
 		right-0
 		rounded-tl-md;
