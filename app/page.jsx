@@ -11,10 +11,7 @@ export default function Home() {
             </p>
 
             <div className="flex justify-center my-8">
-                <Link
-                    href="/stores"
-                    tabIndex="-1"
-                >
+                <Link href="/stores" tabIndex="-1">
                     <button className="btn-primary">My Stores</button>
                 </Link>
             </div>

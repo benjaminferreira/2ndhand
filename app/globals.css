@@ -33,38 +33,51 @@ p > a {
 }
 
 /* Nav Styles */
-nav {
-    @apply pb-4 
+.nav-wrapper {
+    @apply flex
+		justify-center
+		items-center
 		bg-accent1
-		flex 
-		items-center 
-		gap-5 
-		mb-10 
 		pt-10;
 }
 
-nav a,
-nav span {
-    @apply text-accent2 px-2 cursor-pointer;
+nav {
+    @apply flex 
+		items-center 
+		gap-5;
 }
 
-nav a:is(:hover, :focus-visible) {
+nav a {
+    @apply text-accent2 
+		font-bold 
+		px-3 
+		pt-1
+		cursor-pointer
+		pb-3;
+}
+
+nav a:is(:hover, :focus-visible),
+nav a.active:is(:hover, :focus-visible) {
     @apply text-text1;
 }
 
-main nav {
-    @apply border-0;
+nav a.active {
+    @apply text-accent1 
+		bg-bkg3
+		rounded-t-md;
 }
 
 .nav-logo {
-    @apply ml-4	
+    @apply absolute
+		left-0
+		ml-4
+		mb-4
 		px-2
 		py-1
 		font-bold
 		text-xl
 		rounded-md
 		flex
-		justify-center
 		items-center
 		gap-2
 		cursor-pointer

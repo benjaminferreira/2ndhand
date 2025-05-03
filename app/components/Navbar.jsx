@@ -1,28 +1,28 @@
+"use client";
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-import Logo from "./2ndhand-logo.png";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 export default function Navbar() {
-	return (
-		<nav>
-			{/* <Image
-				src={Logo}
-				alt="2ndhand Logo"
-				width={200}
-				quality={100}
-				placeholder="blur"
-				style={{ borderRadius: "8px" }}
-				aria-label="2ndhand logo"
-			/> */}
-			<Link
-				href="/"
-				className="nav-logo"
-			>
-				2ndhand
-			</Link>
-			<Link href="/">Home</Link>
-			<Link href="/stores">My Stores</Link>
-		</nav>
-	);
+    const pathname = usePathname();
+
+    return (
+        <div className="nav-wrapper">
+            <Link href="/" className="nav-logo">
+                2ndhand
+            </Link>
+            <nav>
+                <Link href="/" className={pathname === "/" ? "active" : ""}>
+                    Home
+                </Link>
+                <Link href="/stores" className={pathname === "/stores" ? "active" : ""}>
+                    My Stores
+                </Link>
+                <Link href="/discover" className={pathname === "/discover" ? "active" : ""}>
+                    Discover
+                </Link>
+            </nav>
+        </div>
+    );
 }
