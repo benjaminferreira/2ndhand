@@ -1,5 +1,9 @@
 async function getMyStores() {
-    const res = await fetch("http://localhost:4000/stores");
+    const res = await fetch("http://localhost:4000/stores", {
+        next: {
+            revalidate: 0, // Opt out of using cache
+        },
+    });
     return res.json();
 }
 
@@ -14,8 +18,8 @@ export default async function StoreList() {
                     <p>{store.about}</p>
                     <div className="store-hours cardback">
                         <h3>Hours:</h3>
-                        {store.hours.map((hour) => (
-                            <p>
+                        {store.hours.map((hour, key) => (
+                            <p key={key}>
                                 <span>{hour.split(":")[0]}</span>
                                 <span>{hour.split(":")[1]}</span>
                             </p>
