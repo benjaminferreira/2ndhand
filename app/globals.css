@@ -5,6 +5,7 @@
     --color-accent1: #e68584;
     --color-accent2: #ffeebf;
     --color-accent3: #60aefd;
+    --color-accent4: #4b6161;
     --color-bkg1: #efe6d0; /*#ede5d3; #eee3c8; */
     --color-bkg2: #fff8e8; /*#fffaed;*/
     --color-bkg3: #faf0d8; /*#f4eddd; */
@@ -17,7 +18,7 @@ body {
 
 h1,
 h2 {
-    @apply font-bold text-text1 text-lg;
+    @apply font-bold text-lg;
 }
 
 main {
@@ -50,15 +51,26 @@ nav {
 		gap-5;
 }
 
+.top-nav {
+    @apply flex
+		gap-1
+		justify-center
+		items-center;
+}
+
+.top-nav > span {
+    @apply pt-[3px];
+}
+
 nav a {
     @apply text-accent2 
 		font-semibold 
 		px-3 
 		pt-1
 		cursor-pointer
-		pb-3
+		pb-2
 		text-center
-		w-[80px]
+		w-[104px]
 		box-content;
 }
 
@@ -100,12 +112,16 @@ button {
 		flex
 		justify-between
 		items-center
-		gap-2
+		gap-1
 		text-sm
 		cursor-pointer
 		border-1
 		border-transparent
 		shadow-sm;
+}
+
+button > span {
+    @apply pt-[2px];
 }
 
 button:is(:hover, :focus-visible) {
@@ -182,11 +198,14 @@ form button {
     @apply bg-bkg2
 		shadow-sm
 		rounded-md
-		py-4
-		px-4
 		my-4
 		relative
 		overflow-hidden;
+}
+
+.card.no-header {
+    @apply py-4
+		px-4;
 }
 
 .card h3 {
@@ -198,6 +217,20 @@ form button {
 
 .card p {
     @apply my-4 text-sm text-text1 leading-6;
+}
+
+.card-header {
+    @apply py-4
+		px-4
+		bg-accent4
+		text-accent2
+		flex
+		justify-between;
+}
+
+.card-body {
+    @apply py-4
+		px-4;
 }
 
 /* Pill Styles */
