@@ -1,9 +1,27 @@
+import { notFound } from "next/navigation";
+
+export const dynamicParams = true;
+
+export async function generateStaticParams() {
+    const res = await fetch("http://localhost:4000/stores");
+    const stores = await res.json();
+
+    return stores.map((store) => ({
+        id: store.id,
+    }));
+}
+
 async function getStore(id) {
     const res = await fetch("http://localhost:4000/stores/" + id, {
         next: {
             revalidate: 60,
         },
     });
+
+    if (!res.ok) {
+        notFound();
+    }
+
     return res.json();
 }
 

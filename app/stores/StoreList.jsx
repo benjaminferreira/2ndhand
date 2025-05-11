@@ -20,7 +20,6 @@ export default async function StoreList() {
                         <h2>{store.name}</h2>
                         <Link href={`/stores/${store.id}`}>
                             <svg
-                                dataSlot="icon"
                                 fill="none"
                                 strokeWidth={2}
                                 stroke="currentColor"

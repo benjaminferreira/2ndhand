@@ -14,7 +14,6 @@ export default function Navbar() {
             <nav>
                 <Link href="/" className={pathname === "/" ? " active top-nav" : "top-nav"}>
                     <svg
-                        dataSlot="icon"
                         fill="none"
                         strokeWidth={2}
                         stroke="currentColor"
@@ -34,7 +33,6 @@ export default function Navbar() {
                 </Link>
                 <Link href="/stores" className={pathname === "/stores" ? "active top-nav" : "top-nav"}>
                     <svg
-                        dataSlot="icon"
                         fill="none"
                         strokeWidth={2}
                         stroke="currentColor"
@@ -54,7 +52,6 @@ export default function Navbar() {
                 </Link>
                 <Link href="/discover" className={pathname === "/discover" ? "active top-nav" : "top-nav"}>
                     <svg
-                        dataSlot="icon"
                         fill="none"
                         strokeWidth={2}
                         stroke="currentColor"
