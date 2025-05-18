@@ -1,6 +1,9 @@
 import Link from "next/link";
 
 async function getMyStores() {
+    // Imitate delay to test loading screen.
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+
     const res = await fetch("http://localhost:4000/stores", {
         next: {
             revalidate: 0, // Opt out of using cache
