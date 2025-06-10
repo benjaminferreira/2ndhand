@@ -3,59 +3,62 @@ import { notFound } from "next/navigation";
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-    const res = await fetch("http://localhost:4000/stores");
-    const stores = await res.json();
+	const res = await fetch("http://localhost:4000/stores");
+	const stores = await res.json();
 
-    return stores.map((store) => ({
-        id: store.id,
-    }));
+	return stores.map((store) => ({
+		id: store.id,
+	}));
 }
 
 async function getStore(id) {
-    // Imitate delay to test loading screen.
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+	const res = await fetch("http://localhost:4000/stores/" + id, {
+		next: {
+			revalidate: 60,
+		},
+	});
 
-    const res = await fetch("http://localhost:4000/stores/" + id, {
-        next: {
-            revalidate: 60,
-        },
-    });
+	if (!res.ok) {
+		notFound();
+	}
 
-    if (!res.ok) {
-        notFound();
-    }
-
-    return res.json();
+	return res.json();
 }
 
 export default async function StoreDetails({ params }) {
-    const store = await getStore(params.id);
+	const store = await getStore(params.id);
 
-    return (
-        <main>
-            <nav>
-                <h2>Store Details</h2>
-            </nav>
-            <div key={store.id} className="card">
-                <h2>{store.name}</h2>
-                <p>{store.about}</p>
-                <div className="store-hours cardback">
-                    <h3>Hours:</h3>
-                    {store.hours.map((hour, key) => (
-                        <p key={key}>
-                            <span>{hour.split(":")[0]}</span>
-                            <span>{hour.split(":")[1]}</span>
-                        </p>
-                    ))}
-                </div>
-                <p>Address: {store.address}</p>
-                <p>Phone #: {store.phone}</p>
-                <p>
-                    Website:
-                    <a href={store.website}></a>
-                </p>
-                <div className={`pill ${store.priority}`}>{store.priority} priority</div>
-            </div>
-        </main>
-    );
+	return (
+		<main>
+			<nav>
+				<h2>Store Details</h2>
+			</nav>
+			<div
+				key={store.id}
+				className="card"
+			>
+				<div className="card-header">
+					<h2>{store.name}</h2>
+				</div>
+				<div className="card-body">
+					<p>{store.about}</p>
+					<div className="store-hours cardback">
+						<h3>Hours:</h3>
+						{store.hours.map((hour, key) => (
+							<p key={key}>
+								<span>{hour.split(":")[0]}</span>
+								<span>{hour.split(":")[1]}</span>
+							</p>
+						))}
+					</div>
+					<p>Address: {store.address}</p>
+					<p>Phone #: {store.phone}</p>
+					<p>
+						Website: <a href={store.website}>{store.website}</a>
+					</p>
+					<div className={`pill ${store.priority}`}>{store.priority} priority</div>
+				</div>
+			</div>
+		</main>
+	);
 }

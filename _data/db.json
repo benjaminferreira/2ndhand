@@ -1,58 +1,58 @@
 {
-    "stores": [
-        {
-            "id": "1",
-            "name": "Blessings Abound",
-            "about": "Blessings  Abound Thrift Store is a Christian not for profit organization called  to serve the metro Kansas City Community by selling and recycling donated merchandise in order to provide aid to people in need.",
-            "address": "10325 Metcalf Ave, Overland Park, KS 66212",
-            "phone": "+19136480700",
-            "hours": [
-                "Sunday: Closed",
-                "Monday: 9AM - 6PM",
-                "Tuesday: 9AM - 6PM",
-                "Wednesday: 9AM - 6PM",
-                "Thursday: 9AM - 6PM",
-                "Friday: 9AM - 6PM",
-                "Saturday: 9AM - 6PM"
-            ],
-            "website": "blessingsaboundkc.org",
-            "priority": "high"
-        },
-        {
-            "id": "2",
-            "name": "Ditto Overland Park",
-            "about": "Ditto is a recycled fashion retailer that buys and sells name-brand and designer clothing and accessories in the Kansas City and surrounding areas. We specialize in high-quality, name-brand resale fashion for trendy women, men, teens, plus sizes and maternity at a fraction of original retail prices. Ditto promotes the passion for fashion, encourages environmental awareness and shares the love of bargains.",
-            "address": "7594 W 119th St, Overland Park, KS 66213",
-            "phone": "+19138085488",
-            "hours": [
-                "Sunday: 12PM - 6PM",
-                "Monday: 10AM - 6PM",
-                "Tuesday: 10AM - 6PM",
-                "Wednesday: 10AM - 6PM",
-                "Thursday: 10AM - 6PM",
-                "Friday: 10AM - 6PM",
-                "Saturday: 10AM - 6PM"
-            ],
-            "website": "http://dittokansascity.com/",
-            "priority": "medium"
-        },
-        {
-            "id": "3",
-            "name": "Savers",
-            "about": "Thrift store chain offering secondhand clothing, footwear, furniture, books & household items.",
-            "address": "5441 W 95th St, Overland Park, KS 66207",
-            "phone": "+19136494381",
-            "hours": [
-                "Sunday: 10AM - 7PM",
-                "Monday: 9AM - 8PM",
-                "Tuesday: 9AM - 8PM",
-                "Wednesday: 9AM - 8PM",
-                "Thursday: 9AM - 8PM",
-                "Friday: 9AM - 8PM",
-                "Saturday: 9AM - 8PM"
-            ],
-            "website": "https://stores.savers.com/ks/overlandpark/savers-thrift-store-1140.html",
-            "priority": "low"
-        }
-    ]
+	"stores": [
+		{
+			"id": "1",
+			"name": "Blessings Abound",
+			"about": "Blessings  Abound Thrift Store is a Christian not for profit organization called  to serve the metro Kansas City Community by selling and recycling donated merchandise in order to provide aid to people in need.",
+			"address": "10325 Metcalf Ave, Overland Park, KS 66212",
+			"phone": "+19136480700",
+			"hours": [
+				"Sunday: Closed",
+				"Monday: 9AM - 6PM",
+				"Tuesday: 9AM - 6PM",
+				"Wednesday: 9AM - 6PM",
+				"Thursday: 9AM - 6PM",
+				"Friday: 9AM - 6PM",
+				"Saturday: 9AM - 6PM"
+			],
+			"website": "blessingsaboundkc.org",
+			"priority": "high"
+		},
+		{
+			"id": "2",
+			"name": "Ditto Overland Park",
+			"about": "Ditto is a recycled fashion retailer that buys and sells name-brand and designer clothing and accessories in the Kansas City and surrounding areas. We specialize in high-quality, name-brand resale fashion for trendy women, men, teens, plus sizes and maternity at a fraction of original retail prices. Ditto promotes the passion for fashion, encourages environmental awareness and shares the love of bargains.",
+			"address": "7594 W 119th St, Overland Park, KS 66213",
+			"phone": "+19138085488",
+			"hours": [
+				"Sunday: 12PM - 6PM",
+				"Monday: 10AM - 6PM",
+				"Tuesday: 10AM - 6PM",
+				"Wednesday: 10AM - 6PM",
+				"Thursday: 10AM - 6PM",
+				"Friday: 10AM - 6PM",
+				"Saturday: 10AM - 6PM"
+			],
+			"website": "http://dittokansascity.com/",
+			"priority": "medium"
+		},
+		{
+			"id": "3",
+			"name": "Savers",
+			"about": "Thrift store chain offering secondhand clothing, footwear, furniture, books & household items.",
+			"address": "5441 W 95th St, Overland Park, KS 66207",
+			"phone": "+19136494381",
+			"hours": [
+				"Sunday: 10AM - 7PM",
+				"Monday: 9AM - 8PM",
+				"Tuesday: 9AM - 8PM",
+				"Wednesday: 9AM - 8PM",
+				"Thursday: 9AM - 8PM",
+				"Friday: 9AM - 8PM",
+				"Saturday: 9AM - 8PM"
+			],
+			"website": "https://stores.savers.com/ks/overlandpark/savers-thrift-store-1140.html",
+			"priority": "low"
+		}
+	]
 }
