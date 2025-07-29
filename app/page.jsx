@@ -3,11 +3,10 @@ import Link from "next/link";
 export default function Home() {
 	return (
 		<main>
-			<h2>Home</h2>
+			<h2>Welcome!</h2>
 			<p>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla saepe tenetur excepturi alias, deleniti
-				facere necessitatibus veritatis officia, iusto minima, optio autem cumque eum nostrum consequatur enim
-				quisquam voluptatibus? Modi.
+				Please click below to view stores you have saved, as well as add new stores! Check below for updates -
+				we are working on improving the app!
 			</p>
 
 			<div className="flex justify-center my-8">
@@ -21,25 +20,30 @@ export default function Home() {
 			<h2>Favorite Stores</h2>
 			<div className="cardback">
 				<div className="flex justify-center my-8">
-					<button className="btn-secondary">
-						<svg
-							fill="none"
-							strokeWidth={1.5}
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-							xmlns="http://www.w3.org/2000/svg"
-							aria-hidden="true"
-							height={20}
-							width={20}
-						>
-							<path
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-							/>
-						</svg>
-						<span>Add Store</span>
-					</button>
+					<Link
+						href="/stores/add"
+						tabIndex="-1"
+					>
+						<button className="btn-secondary">
+							<svg
+								fill="none"
+								strokeWidth={1.5}
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+								xmlns="http://www.w3.org/2000/svg"
+								aria-hidden="true"
+								height={20}
+								width={20}
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+								/>
+							</svg>
+							<span>Add Store</span>
+						</button>
+					</Link>
 				</div>
 			</div>
 
